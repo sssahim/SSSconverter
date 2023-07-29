@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSS converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+      <h1 class="header__title">JPG to PNG Converter</h1>
+      <div class="user-icon" onclick="showModal()">&#x1F464;</div>
+    </header>
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="login-form">
+          <h2>Login</h2>
+          <input type="text" id="loginUsername" placeholder="Username" />
+          <input type="password" id="loginPassword" placeholder="Password" />
+          <button onclick="login()">Login</button>
+        </div>
+        <div class="signup-form">
+          <h2>Sign Up</h2>
+          <input type="text" id="signupUsername" placeholder="Username" />
+          <input type="password" id="signupPassword" placeholder="Password" />
+          <button onclick="signup()">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      <div class="container">
+        <label for="imageInput">Select a JPG Image</label>
+        <input type="file" id="imageInput" accept=".jpg" />
+        <button onclick="convertToPNG()" id="convertBtn" style="display: none;">Convert to PNG</button>
+        <a href="#" id="downloadLink" style="display: none;">Download PNG</a>
+        <div id="imagePreview" style="display: none;">
+          <h2>Image Preview</h2>
+          <img id="previewImg" src="#" alt="Preview" />
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <p class="footer__text">&copy; 2023 SSS Converter. All rights reserved.</p>
+    </footer>
+    <script src="converter.js"></script>
+  </body>
+  </html>
